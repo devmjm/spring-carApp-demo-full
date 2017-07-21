@@ -1,0 +1,30 @@
+CREATE TABLE public.users
+(
+    id uuid NOT NULL,
+    firstname character varying(100) COLLATE pg_catalog."default",
+    lastname character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT users_pkey PRIMARY KEY (id)
+)
+
+CREATE TABLE public.car
+(
+    vin integer NOT NULL,
+    driver uuid,
+    CONSTRAINT car_pkey PRIMARY KEY (vin),
+    CONSTRAINT car_driver_fkey FOREIGN KEY (driver)
+        REFERENCES public.users (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+INSERT INTO Users(id, firstname, lastname)
+VALUES
+	(uuid_generate_v4(), 'Bill', 'Nye'),
+    (uuid_generate_v4(), 'Kanye', 'West'),
+    (uuid_generate_v4(), 'Bill', 'Gates')
+    
+INSERT INTO car (vin, driver)
+VALUES
+	(1, '47b93f0dca614babbc867b44cfaa99dd'),
+    (2, '667a5636d0e84c92a56bda962b7dcd8e'),
+    (3, 'fb6f19a55e65485ca2bcefd5fb0ed944')
