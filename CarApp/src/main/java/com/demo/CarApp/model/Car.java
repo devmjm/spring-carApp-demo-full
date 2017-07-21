@@ -1,4 +1,4 @@
-package com.daimler.CarApp.model;
+package com.demo.CarApp.model;
 
 import java.util.UUID;
 

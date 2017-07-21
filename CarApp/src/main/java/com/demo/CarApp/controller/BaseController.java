@@ -1,4 +1,4 @@
-package com.daimler.CarApp.controller;
+package com.demo.CarApp.controller;
 
 public class BaseController implements IBaseController {
 

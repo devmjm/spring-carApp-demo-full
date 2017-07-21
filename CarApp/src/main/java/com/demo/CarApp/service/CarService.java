@@ -1,12 +1,12 @@
-package com.daimler.CarApp.service;
+package com.demo.CarApp.service;
 
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.daimler.CarApp.model.Car;
-import com.daimler.CarApp.repository.CarRepository;
+import com.demo.CarApp.model.Car;
+import com.demo.CarApp.repository.CarRepository;
 
 @Service
 public class CarService {

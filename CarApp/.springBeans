@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.CarApp.CarApp</config>
+		<config>java:com.demo.CarApp.CarApp</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
