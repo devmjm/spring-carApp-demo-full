@@ -1,0 +1,16 @@
+version: "3.2"
+services:
+  carapp:
+    build: "./CarApp"
+    ports:
+      - "3000:8080"
+    depends_on:
+      - car-db
+  car-db:
+    image: postgres:9.6.3-alpine
+    environment:
+      - POSTGRES_PASSWORD=FakeTaco14
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
